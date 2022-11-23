@@ -1,0 +1,48 @@
+version: "3.9"
+services:
+  postgressql:
+    image: postgres
+    restart: always
+    networks:
+      - keycloak-network
+    environment:
+      - POSTGRES_DB=keycloak 
+      - POSTGRES_USER=keycloak 
+      - POSTGRES_PASSWORD=password
+    ports:
+      - "5432:5432" # postgres port ist 5432
+    volumes: 
+      - postgressql:/var/lib/postgresql/data
+  adminer:
+    image: adminer
+    restart: always
+    depends_on:
+      - postgressql
+    networks:
+      - keycloak-network
+    ports:
+      - 8092:8080 #adminer port ist 8092   
+    links:
+        - postgressql    
+  keycloak:
+    image: bitnami/keycloak:19.0.3
+    restart: always
+    depends_on:
+      - postgressql
+    networks:
+      - keycloak-network
+    environment:
+      - KEYCLOAK_DATABASE_HOST=postgressql 
+      - KEYCLOAK_DATABASE_PORT=5432 
+      - KEYCLOAK_DATABASE_NAME=keycloak 
+      - KEYCLOAK_DATABASE_USER=keycloak 
+      - KEYCLOAK_DATABASE_PASSWORD=password 
+      - KEYCLOAK_ADMIN_USER=admin 
+      - KEYCLOAK_ADMIN_PASSWORD=Entwicklung123  
+    ports:
+      - "8091:8080" #keycloak port ist 8091
+networks:
+  keycloak-network:
+volumes:
+  postgressql:
+    driver: local
