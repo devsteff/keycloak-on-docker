@@ -1,7 +1,0 @@
-README.md
-docker-compose.yaml
-howto-docker-cheat-sheet.md
-jwt-token.json
-my-postgres.conf
-postgresql.conf
-xxx.txt
