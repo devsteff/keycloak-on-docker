@@ -1,0 +1,13 @@
+total 128
+drwxr-xr-x  12 stf  staff    384 22 Dez 17:03 .
+drwxr-xr-x   8 stf  staff    256 23 Nov 16:31 ..
+drwxr-xr-x  14 stf  staff    448 22 Dez 17:02 .git
+-rw-r--r--   1 stf  staff      4 23 Nov 16:34 .gitignore
+-rw-r--r--   1 stf  staff    270 23 Nov 16:56 README.md
+-rw-r--r--   1 stf  staff   1143 22 Dez 14:35 docker-compose.yaml
+-rw-r--r--   1 stf  staff   3074 22 Dez 16:08 howto-docker-cheat-sheet.md
+-rw-r--r--   1 stf  staff   4277 23 Nov 16:39 jwt-token.json
+-rw-r--r--   1 stf  staff      0 22 Dez 17:03 ls.txt
+-rw-r--r--   1 stf  staff  29482 17 Nov 12:37 my-postgres.conf
+-rw-r--r--   1 stf  staff     36 17 Nov 12:37 postgresql.conf
+-rw-r--r--   1 stf  staff    114 22 Dez 16:47 xxx.txt
