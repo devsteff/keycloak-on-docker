@@ -74,7 +74,6 @@
           `$ docker compose down`
     - instead of the above **docker compose** CLI command you can also use the **docker-compose** CLI with. but maybe in the future the docker-compose will be removed.
 
-
     ### to log in into db adminer do the following
     - open the following in a browser: `http://localhost:8092`
     - enter the following credentials into the upcoming login mask
