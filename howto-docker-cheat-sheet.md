@@ -52,7 +52,7 @@
           - KEYCLOAK_ADMIN_USER=admin 
           - KEYCLOAK_ADMIN_PASSWORD=Entwicklung123  
         ports: 
-          - "8090:8080"
+          - "8091:8080"
     networks:
       keycloak-network:
     volumes:
@@ -69,10 +69,11 @@
 - to remove from docker `$ docker compose down --volumes`
 - to remove from docker but leave the volume with the database data `$ docker compose down`
 - instead of the above **docker compose** CLI command you can also use the **docker-compose** CLI with. but maybe in the future the docker-compose will be removed.
-
-### to log in into db adminer do the following
-
-- open the following in a browser: `http://localhost:8092`
+- to log in to the keycloak admin console open [http://localhost:8091](http://localhost:8091) in a browser
+  - enter the followinfg credentials to access the admin console
+  - user: **admin**
+  - password: **Entwicklung123**
+- open the following link in a browser [http://localhost:8092](http://localhost:8092)
 - enter the following credentials into the upcoming login mask
   - Datenbank System: **PostgreSQL**
   - Server: **postgressql**
